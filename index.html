@@ -15,35 +15,29 @@
       </script>
       <!-- END OF ALTCRAFT PIXEL CODE !-->
 
-    <h2>Спасибо за покупку!</h2>
+    <h2>2Спасибо за покупку!</h2>
     <p>Ваш заказ оформлен</p>
     <button id="buy-btn">Купить</button>
 
-    <script>
-      document.getElementById("buy-btn").addEventListener("click", function() {
-          ak_pixel_push(
-            "purchase",      // Название цели
-            100,             // Значение цели (например, сумма покупки)
-            {
-              field_name: "email",
-              field_value: "john.doe@example.com", // Поле для поиска профиля
-            },
-            {
-              _fname: "John",
-              _lname: "Doe",
-              email: "john.doe@example.com", // Данные профиля
-              subscriptions: [
-                {
-                  resource_id: 82,
-                  channel: "email",
-                  email: "john.doe@example.com",
-                },
-              ],
-            },
-            "email"  // Режим поиска профиля по email
-          );
-      });
-    </script>
+<script>
+  document.getElementById("buy-btn").addEventListener("click", function() {
+      ak_pixel_push(
+        "purchase",      
+        100,             
+        {
+            field_name: "custom_field",
+            field_value: "qwerty321",
+            "db_id": 94
+        },
+        {
+          _fname: "John",
+          _lname: "Doe",
+          email: "john.doe@example.com", 
+        },
+        "email"  
+      );
+  });
+</script>
 
 </body>
 
